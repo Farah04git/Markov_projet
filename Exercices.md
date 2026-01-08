@@ -1,6 +1,0 @@
-#### Exercice 1 - commenter les balises 
-- **`if token not in transitions[prev]:`** Cette ligne vérifie si c'est la première fois que l'on voit le mot actuel (`token`) apparaître après le mot précédent (`prev`). Le dictionnaire `transitions[prev]` stocke tous les mots qui ont déjà suivi `prev`.
-- **`transitions[prev][token] = 0`** Si l'association entre ces deux mots n'existe pas encore dans notre "mémoire", on l'initialise à **zéro**. C'est comme créer une nouvelle case vide dans un tableau avant de commencer à compter.
-- **`transitions[prev][token] += 1`** On incrémente le compteur : on vient de trouver une occurrence de la transition `prev`→ `token`. Plus ce nombre sera élevé à la fin, plus la probabilité que ce mot suive l'autre sera grande lors de la génération
-- **`prev = token`** Cette ligne est cruciale pour respecter la **propriété markovienne
-- **. Le mot qui était le "mot actuel" devient maintenant le "mot précédent" pour l'itération suivante de la boucle. Le modèle avance ainsi d'un pas dans la phrase
